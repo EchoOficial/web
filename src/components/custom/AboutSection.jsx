@@ -70,12 +70,7 @@ const AboutSection = () => {
             </CardHeader>
             <CardBody>
               <p className="text-md font-semibold">
-                A final-year student at University of Economics Ho Chi Minh
-                City, Vietnam majoring in Software Engineering. I have
-                intermediate knowledge of Mobile App Development (Android) and
-                want to learn and develop my skills in Android programming,
-                including using the latest technologies and building
-                high-quality and high-performing applications
+                O Echo foi originalmente desenvolvido por maxrave-dev e continua sendo mantido por ele sob o nome SimpMusic. A equipe do Paçoca analisou o código-fonte e decidiu criar o Echo a partir dessa base, adaptando e aprimorando o projeto.
               </p>
             </CardBody>
           </Card>
