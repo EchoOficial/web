@@ -2,24 +2,24 @@ import DonateSection from "@/components/custom/DonateSection";
 import React from "react";
 
 export const metadata = {
-  title: "Donate to Echo",
-  description: "Support the development of Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
+  title: "Doe para o Echo",
+  description: "Apoie o desenvolvimento do Echo - um aplicativo de música simples que usa o YouTube Music como plataforma.",
   openGraph: {
-    title: "Donate to Echo",
-    description: "Support the development of Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
+    title: "Doe para o Echo",
+    description: "Apoie o desenvolvimento do Echo - um aplicativo de música simples que usa o YouTube Music como plataforma.",
     images: [
       {
         url: "/images/blog/feature.jpg",
         width: 1200,
         height: 630,
-        alt: "Echo - Feel free when playing music",
+        alt: "Echo - Sinta-se à vontade ao tocar música.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Donate to Echo",
-    description: "Support the development of Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
+    title: "Doe para o Echo",
+    description: "Apoie o desenvolvimento do Echo - um aplicativo de música simples que usa o YouTube Music como plataforma.",
     images: ["/images/blog/feature.jpg"],
   },
 };
