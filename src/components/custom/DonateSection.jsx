@@ -23,14 +23,14 @@ const DonateSection = () => {
         <div className="mx-auto place-items-center py-21 sm:py-35 lg:py-42 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <div className="sm:mx-7 lg:mx-20">
             <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-              Keep Echo always free and no-ads!
+              Mantenha o Echo sempre gratuito e sem anúncios!
             </h2>
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight blink">
-              Help us to keep energy and time to develop Echo
+              Ajude-nos a conservar energia e tempo para desenvolver o Echo.
             </h4>
           </div>
           <div className="grid grid-cols-1 justify-center">
-            <Button
+            {/* <Button
               rel="noopener noreferrer"
               target="_blank"
               href="https://github.com/sponsors/maxrave-dev"
@@ -42,18 +42,18 @@ const DonateSection = () => {
               className="mb-7"
             >
               <p className="font-semibold">Donate via GitHub Sponsors </p>
-            </Button>
+            </Button> */}
             <Button
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.buymeacoffee.com/maxrave"
+              href="https://pacoca.net/doacao"
               as={Link}
               color="primary"
               size="lg"
               radius="md"
               endContent={<SiBuymeacoffee />}
             >
-              <p className="font-semibold">Buy Me A Coffee </p>
+              <p className="font-semibold">Doe pelo Paçoca </p>
             </Button>
           </div>
         </div>
