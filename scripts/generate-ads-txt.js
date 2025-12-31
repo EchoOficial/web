@@ -13,7 +13,7 @@ const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
 //   );
 //   process.exit(1);
 // }
-
+ 
 if(publisherId){
   // Create the content for ads.txt
   let adsContent = `google.com, ${publisherId}, DIRECT, f08c47fec0942fa0`;
