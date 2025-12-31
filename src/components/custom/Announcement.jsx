@@ -6,7 +6,7 @@ const Announcement = () => {
   return (
     <div className="flex justify-start items-center py-4">
       <Link
-        href="/blogs/en/simpmusic-desktop-alpha"
+        href="/nightly-download"
         className="group inline-flex items-center gap-2 rounded-full border border-white/20 dark:border-white/10 bg-white/10 dark:bg-white/5 backdrop-blur-md px-3 py-2 text-sm transition-all hover:bg-white/20 dark:hover:bg-white/10 shadow-lg"
       >
         <TbSparkles className="text-lg" />
