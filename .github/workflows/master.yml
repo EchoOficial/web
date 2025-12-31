@@ -4,56 +4,50 @@ on:
   push:
     branches: [master]
 
-  pull_request:
-    branches: [master]
-
   workflow_dispatch:
 
 jobs:
   deploy-production:
-    runs-on: ubuntu-latest 
-    
+    runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout do repositório
-      uses: actions/checkout@v2
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
 
-    - name: Copiar arquivos para VPS
-      uses: easingthemes/ssh-deploy@main
-      with:
-        SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-        ARGS: "-avz --mkpath"
-        SOURCE: "./"
-        REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-        REMOTE_USER: ${{secrets.REMOTE_USER}}
-        REMOTE_PORT: ${{secrets.REMOTE_PORT}}
-        TARGET: ${{secrets.TARGET_PRODUCTION}}/front
-        
-    - name: "Build da aplicação"
-      uses: appleboy/ssh-action@v1.2.0
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.REMOTE_PORT }}
-        script: |
-            cd ${{secrets.TARGET_PRODUCTION}}/front
+      - name: Deploy para VPS
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.REMOTE_PORT }}
+          command_timeout: 40m
+          script: |
+            set -e
+
+            APP_DIR=${{ secrets.TARGET_PRODUCTION }}/front
+
+            echo "➡️ Atualizando código"
+            mkdir -p $APP_DIR
+            cd $APP_DIR
+
+            if [ ! -d ".git" ]; then
+              git clone https://github.com/EchoOficial/web.git .
+            else
+              git fetch origin
+              git reset --hard origin/master
+            fi
+
+            echo "➡️ Instalando dependências"
             npm install --legacy-peer-deps
-            npm run build
-            chown -R  www-data:www-data .
-            sudo chmod -R 755 .
-        command_timeout: 30m 
-    
-    - name: "Substituir build por novo conteúdo"
-      uses: appleboy/ssh-action@v1.2.0
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.REMOTE_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.REMOTE_PORT }}
-        script: |
-            # Substituir a pasta build pela versão atualizada
-            rsync -av --delete ${{secrets.TARGET_PRODUCTION}}/front/temp_build/ ${{secrets.TARGET_PRODUCTION}}/build/
 
-            # Apaga tudo de front exceto o arquivo .env, ignorando erros
-            cd ${{secrets.TARGET_PRODUCTION}}/front
-            find . -mindepth 1 ! -name '.env' -exec rm -rf {} + 2>/dev/null || true
+            echo "➡️ Buildando Next.js"
+            npm run build
+
+            echo "➡️ Reiniciando PM2"
+            pm2 restart simpmusic-front || pm2 start npm --name "simpmusic-front" -- start
+            pm2 save
+
+            echo "➡️ Ajustando permissões"
+            chown -R www-data:www-data $APP_DIR
+            chmod -R 755 $APP_DIR
