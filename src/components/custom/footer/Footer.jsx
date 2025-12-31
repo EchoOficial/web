@@ -6,26 +6,26 @@ import NextLink from "next/link";
 
 const communities = [
   {
-    title: "Discord",
-    description: "Join our Discord server to get in touch with the community.",
+    title: "Paçoca Discord",
+    description: "Junte-se ao nosso servidor do Discord para se comunicar com a comunidade.",
     thumbnail:
       "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg",
-    url: "https://discord.gg/Rq5tWVM9Hg",
+    url: "https://discord.gg/xGzYPG3Z",
   },
-  {
-    title: "GitHub",
-    description: "Contribute to the project on GitHub or create an issue.",
-    thumbnail:
-      "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    url: "https://github.com/maxrave-dev/SimpMusic",
-  },
-  {
-    title: "Crowdin",
-    description: "Help us translate the app into your language.",
-    thumbnail:
-      "https://support.crowdin.com/assets/logos/symbol/svg/crowdin-symbol-cDark.svg",
-    url: "https://crowdin.com/project/simpmusic",
-  },
+  // {
+  //   title: "GitHub",
+  //   description: "Contribute to the project on GitHub or create an issue.",
+  //   thumbnail:
+  //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+  //   url: "https://github.com/maxrave-dev/Echo",
+  // },
+  // {
+  //   title: "Crowdin",
+  //   description: "Help us translate the app into your language.",
+  //   thumbnail:
+  //     "https://support.crowdin.com/assets/logos/symbol/svg/crowdin-symbol-cDark.svg",
+  //   url: "https://crowdin.com/project/simpmusic",
+  // },
 ];
 const Footer = () => {
   return (
@@ -44,10 +44,10 @@ const Footer = () => {
       </div>
       <div className="py-20">
         <h2 className="scroll-m-20 text-center text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-          Community
+          Comunidade
         </h2>
         <h4 className="scroll-m-20 text-xl text-center font-semibold tracking-tight">
-          Get involved in our community. Everyone is welcome!
+          Participe da nossa comunidade. Todos são bem-vindos!
         </h4>
       </div>
       <div className="mx-21 my-10 flex flex-wrap justify-center justify-items-center gap-12">
@@ -79,9 +79,9 @@ const Footer = () => {
           </Card>
         ))}
       </div>
-      <div className="py-10 text-center">
+      {/* <div className="py-10 text-center">
         <h2 className="scroll-m-20 text-3xl font-bold tracking-tight lg:text-4xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-          SimpMusic is sponsored by:
+          Echo is sponsored by:
         </h2>
         <div className="flex flex-col items-center justify-center gap-8 my-8">
           <a href="https://vercel.com/oss">
@@ -94,7 +94,7 @@ const Footer = () => {
             <Image src="https://support.crowdin.com/assets/logos/plate/png/crowdin-logo-with-plate.png" width={300} alt="Crowdin" />
           </a>
           <a href="https://sentry.io" target="_blank" rel="noopener noreferrer">
-            <Image src="https://github.com/maxrave-dev/SimpMusic/blob/dev/asset/sentry.svg?raw=true" width={300} alt="Sentry" />
+            <Image src="https://github.com/maxrave-dev/Echo/blob/dev/asset/sentry.svg?raw=true" width={300} alt="Sentry" />
           </a>
         </div>
         <div className="text-center text-gray-400/80">
@@ -116,21 +116,21 @@ const Footer = () => {
             Check out the <Link isExternal showAnchorIcon href="https://vercel.com/open-source-program" color="primary">Vercel open-source program</Link>
           </p>
         </div>
-      </div>
+      </div> */}
       <div className="pt-20 grid grid-cols-1 justify-items-center gap-2">
         <p className="text-center text-gray-400/80 text-md">
-          SimpMusic app is FOSS and under GPL-3.0 license.
+         O aplicativo Echo é FOSS e está sob a licença GPL-3.0.
         </p>
         <p className="text-center text-gray-400/80 text-md">
-          © 2023-2025 SimpMusic - @maxrave-dev
+          ©2025 Echo - Paçoca, rede social
         </p>
         <div className="flex gap-4 items-center">
           <NextLink href="/privacy-policy" passHref>
             <span className="text-center text-gray-400/80 text-md hover:text-gray-300 cursor-pointer">
-              Privacy Policy
+              Política de Privacidade
             </span>
           </NextLink>
-          <Link
+          {/* <Link
             className="text-center text-gray-400/80 text-md"
             isExternal
             showAnchorIcon
@@ -139,11 +139,11 @@ const Footer = () => {
             anchorIcon={<TbBrandNextjs />}
           >
             Build with Next.js
-          </Link>
+          </Link> */}
         </div>
-        <p className="pt-2 text-center text-gray-600/80 text-sm">
+        {/* <p className="pt-2 text-center text-gray-600/80 text-sm">
           I use AdSense to insert ads in simpmusic.org. <br />The revenue from ads is help me to maintain the website and the app. Thanks for your support!
-        </p>
+        </p> */}
       </div>
     </div>
   );

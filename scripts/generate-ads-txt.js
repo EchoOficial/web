@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+require("dotenv").config();
 
 // Get the AdSense publisher ID from environment variables
 const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;

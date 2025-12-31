@@ -17,21 +17,21 @@ export async function generateMetadata({ params }) {
   
   if (!blog) {
     return {
-      title: "Blog Post Not Found - SimpMusic",
+      title: "Blog Post Not Found - Echo",
       description: "The blog post you are looking for does not exist.",
     };
   }
 
   const title = params.slug[0] === 'vi' ? blog.titleVn : blog.title;
   const description = params.slug[0] === 'vi' 
-    ? (blog.descriptionVn || "Đọc thêm về SimpMusic - Ứng dụng nghe nhạc đơn giản sử dụng YouTube Music làm backend")
-    : (blog.description || "Read more about SimpMusic - A simple music app using YouTube Music for backend");
+    ? (blog.descriptionVn || "Đọc thêm về Echo - Ứng dụng nghe nhạc đơn giản sử dụng YouTube Music làm backend")
+    : (blog.description || "Read more about Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend");
   
   return {
-    title: `${title} - SimpMusic Blog`,
+    title: `${title} - Echo Blog`,
     description: description,
     openGraph: {
-      title: `${title} - SimpMusic Blog`,
+      title: `${title} - Echo Blog`,
       description: description,
       images: [
         {
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} - SimpMusic Blog`,
+      title: `${title} - Echo Blog`,
       description: description,
       images: [blog.imageUrl || "/images/blog/feature.jpg"],
     },
@@ -113,7 +113,7 @@ export default async function BlogPost({ params }) {
           <AuthorInfo 
             author={{
               name: "Nguyen Duc Tuan Minh",
-              role: "SimpMusic Developer"
+              role: "Echo Developer"
             }}
           />
         </div>

@@ -9,7 +9,7 @@ import { MdDownload } from "react-icons/md";
 
 async function fetcher() {
   const res = await fetch(
-    "https://api.github.com/repos/maxrave-dev/SimpMusic/releases"
+    "https://api.github.com/repos/maxrave-dev/Echo/releases"
   );
   if (!res.ok) {
     throw new Error(res.statusText);
@@ -18,7 +18,7 @@ async function fetcher() {
 }
 export default function Download() {
   const { data, error, isLoading } = useSWR(
-    `https://api.github.com/repos/maxrave-dev/SimpMusic/releases`,
+    `https://api.github.com/repos/maxrave-dev/Echo/releases`,
     fetcher
   );
   const nodeRef = useRef();

@@ -3,24 +3,24 @@ import { databases, COLLECTION_ID, DATABASE_ID, Query } from '@/lib/appwrite';
 import BlogsFilter from '@/components/custom/BlogsFilter';
 
 export const metadata = {
-  title: "Blog - SimpMusic",
-  description: "Read the latest news and updates about SimpMusic - A simple music app using YouTube Music for backend",
+  title: "Blog - Echo",
+  description: "Read the latest news and updates about Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
   openGraph: {
-    title: "Blog - SimpMusic",
-    description: "Read the latest news and updates about SimpMusic - A simple music app using YouTube Music for backend",
+    title: "Blog - Echo",
+    description: "Read the latest news and updates about Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
     images: [
       {
         url: "/images/blog/feature.jpg",
         width: 1200,
         height: 630,
-        alt: "SimpMusic - Feel free when playing music",
+        alt: "Echo - Feel free when playing music",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog - SimpMusic",
-    description: "Read the latest news and updates about SimpMusic - A simple music app using YouTube Music for backend",
+    title: "Blog - Echo",
+    description: "Read the latest news and updates about Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
     images: ["/images/blog/feature.jpg"],
   },
 };

@@ -23,10 +23,10 @@ const DonateSection = () => {
         <div className="mx-auto place-items-center py-21 sm:py-35 lg:py-42 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           <div className="sm:mx-7 lg:mx-20">
             <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-              Keep SimpMusic always free and no-ads!
+              Keep Echo always free and no-ads!
             </h2>
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight blink">
-              Help us to keep energy and time to develop SimpMusic
+              Help us to keep energy and time to develop Echo
             </h4>
           </div>
           <div className="grid grid-cols-1 justify-center">

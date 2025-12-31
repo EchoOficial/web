@@ -28,7 +28,7 @@ const AboutSection = () => {
         </div>
         <div className="mx-auto place-items-center py-21 sm:py-35 lg:py-42 grid grid-cols-1 gap-6">
           <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-            About us
+            Sobre
           </h2>
           <Card className="max-w-[600px] px-10 py-10 bg-transparent">
             <CardHeader className="flex gap-3 justify-between">

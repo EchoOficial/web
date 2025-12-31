@@ -1,10 +1,10 @@
-# SimpMusic Web
+# Echo Web
 
-The official landing page for SimpMusic - A simple music app using YouTube Music for backend.
+The official landing page for Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend.
 
 ## Landing Page
 
-This repository contains the official website for SimpMusic, featuring:
+This repository contains the official website for Echo, featuring:
 
 - App overview and features
 - Download links for all supported platforms
@@ -13,11 +13,11 @@ This repository contains the official website for SimpMusic, featuring:
 
 ## Live Website
 
-Visit the official SimpMusic website: [simpmusic.org](https://simpmusic.org)
+Visit the official Echo website: [simpmusic.org](https://simpmusic.org)
 
-## Download SimpMusic
+## Download Echo
 
-Get SimpMusic for Android: [Download](https://simpmusic.org/download)
+Get Echo for Android: [Download](https://simpmusic.org/download)
 
 ## 🤝 Contributing
 
@@ -29,7 +29,7 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Note**: This is the landing page repository. For the main SimpMusic app, visit [SimpMusic](https://github.com/maxrave-dev/SimpMusic).
+**Note**: This is the landing page repository. For the main Echo app, visit [Echo](https://github.com/maxrave-dev/Echo).
 
  ## Support & Donations 
  #### Special thanks to all supporter ❤️    
@@ -43,10 +43,10 @@ src="https://raw.githubusercontent.com/liberapay/liberapay.com/master/www/assets
     
  ### MOMO or Vietnamese banking    
  <p float="left">        
- <img src="https://github.com/maxrave-dev/SimpMusic/blob/dev/asset/52770992.jpg?raw=true" width="300"> 
+ <img src="https://github.com/maxrave-dev/Echo/blob/dev/asset/52770992.jpg?raw=true" width="300"> 
  </p>
 
-## SimpMusic is sponsored by:
+## Echo is sponsored by:
 <br />
 <a href="https://vercel.com/oss">
   <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
@@ -61,7 +61,7 @@ src="https://raw.githubusercontent.com/liberapay/liberapay.com/master/www/assets
 </a>
 <br>
 <a href="https://sentry.io">
-<img src="https://github.com/maxrave-dev/SimpMusic/blob/dev/asset/sentry.svg?raw=true" width="300"/>
+<img src="https://github.com/maxrave-dev/Echo/blob/dev/asset/sentry.svg?raw=true" width="300"/>
 </a>
 <br>
 <br>
@@ -75,4 +75,4 @@ Crowdin and Sentry both have a free enterprise plan for Open-source projects. Fo
 Check out the Vercel open-source program:
 - https://vercel.com/open-source-program
 
-*This project is a part of SimpMusic.org Open-source project by me [maxrave-dev](https://github.com/maxrave-dev)*
+*This project is a part of Echo.org Open-source project by me [maxrave-dev](https://github.com/maxrave-dev)*

@@ -14,7 +14,7 @@ const DownloadInfoSection = () => {
     //   <div className="relative isolate pt-14">
     //     <Download />
     //     <h3 className="text-center scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl bg-clip-text py-10 text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-    //       Download SimpMusic to your Android Device now to get the best
+    //       Download Echo to your Android Device now to get the best
     //       experience for streaming music now!
     //     </h3>
     //   </div>
@@ -40,18 +40,17 @@ const DownloadInfoSection = () => {
           <div className="flex flex-col justify-center">
             <div>
               <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-                Be a SimpMusic-er
+                Seja um Echo-er
               </h2>
               <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-                Download SimpMusic to your Android Device now to get the best
-                experience for streaming music now!
+                Baixe o Echo para seu dispositivo Android agora mesmo e tenha a melhor experiência de streaming de música!
               </h4>
             </div>
             <div className="pt-8">
               <Button
                 color="primary"
                 size="lg"
-                href="/download"
+                href="/nightly-download"
                 as={Link}
                 radius="lg"
                 endContent={<MdDownload />}

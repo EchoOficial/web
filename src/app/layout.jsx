@@ -25,20 +25,20 @@ const sfpDisplay = localFont({
 })
 
 export const metadata = {
-  title: "SimpMusic",
-  description: "A simple music app using YouTube Music for backend",
+  title: "Echo",
+  description: "Um aplicativo de música simples que utiliza o YouTube Music como backend",
   metadataBase: new URL("https://simpmusic.org"),
   openGraph: {
-    title: "SimpMusic",
-    description: "A simple music app using YouTube Music for backend",
+    title: "Echo",
+    description: "Um aplicativo de música simples que utiliza o YouTube Music como backend",
     url: "https://simpmusic.org",
-    siteName: "SimpMusic",
+    siteName: "Echo",
     images: [
       {
         url: "/images/blog/feature.jpg",
         width: 1200,
         height: 630,
-        alt: "SimpMusic - Feel free when playing music",
+        alt: "Echo - Feel free when playing music",
       },
     ],
     locale: "en_US",
@@ -46,8 +46,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SimpMusic",
-    description: "A simple music app using YouTube Music for backend",
+    title: "Echo",
+    description: "Um aplicativo de música simples que utiliza o YouTube Music como backend",
     images: ["/images/blog/feature.jpg"],
   },
 };
@@ -76,7 +76,7 @@ const RootLayout = ({ children }) => {
           <Footer />
           <div itemScope itemType="https://schema.org/WebSite">
             <link itemProp="url" href="https://simpmusic.org" />
-            <meta itemProp="name" content="SimpMusic" />
+            <meta itemProp="name" content="Echo" />
           </div>
         </Providers>
       </body>

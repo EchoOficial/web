@@ -21,16 +21,18 @@ const AdSense = ({
   }, [adRef]);
 
   return (
-    <div className={`adsense-container ${className}`}>
-      <ins
-        ref={adRef}
-        className="adsbygoogle"
-        style={style}
-        data-ad-client="ca-pub-4666740922614578"
-        data-ad-format={adFormat}
-        data-full-width-responsive="true"
-      />
-    </div>
+    <>
+    </>
+    // <div className={`adsense-container ${className}`}>
+    //   <ins
+    //     ref={adRef}
+    //     className="adsbygoogle"
+    //     style={style}
+    //     data-ad-client="ca-pub-4666740922614578"
+    //     data-ad-format={adFormat}
+    //     data-full-width-responsive="true"
+    //   />
+    // </div>
   );
 };
 

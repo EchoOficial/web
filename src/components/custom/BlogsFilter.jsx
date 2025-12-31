@@ -72,8 +72,8 @@ export default function BlogsFilter({ blogs, defaultImage }) {
       
       {filteredBlogs.length === 0 && (
         <div className="text-center py-8">
-          <h2 className="text-2xl font-bold mb-4">No posts found</h2>
-          <p>Please try a different search term or category.</p>
+          <h2 className="text-2xl font-bold mb-4">Nenhum post encontrado</h2>
+          <p>Por favor, tente um termo de pesquisa ou categoria diferente.</p>
         </div>
       )}
     </>
