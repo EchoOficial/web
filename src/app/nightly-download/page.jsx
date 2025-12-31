@@ -25,7 +25,7 @@ export default function NightlyDownload() {
             url: downloadUrls.android,
             color: 'success',
             chipColor: 'success',
-            description: 'APK for Android devices',
+            description: 'APK para Android',
             fileType: '.apk'
         },
         {
@@ -34,27 +34,27 @@ export default function NightlyDownload() {
             url: downloadUrls.windows,
             color: 'primary',
             chipColor: 'primary',
-            description: 'Installer for Windows',
+            description: 'Instalador para Windows',
             fileType: '.msi'
         },
-        {
-            name: 'Linux',
-            icon: FaLinux,
-            url: downloadUrls.linux,
-            color: 'warning',
-            chipColor: 'warning',
-            description: 'Package for Linux',
-            fileType: '.deb'
-        },
-        {
-            name: 'macOS',
-            icon: FaApple,
-            url: downloadUrls.macos,
-            color: 'default',
-            chipColor: 'default',
-            description: 'Installer for macOS',
-            fileType: '.dmg'
-        }
+        // {
+        //     name: 'Linux',
+        //     icon: FaLinux,
+        //     url: downloadUrls.linux,
+        //     color: 'warning',
+        //     chipColor: 'warning',
+        //     description: 'Package for Linux',
+        //     fileType: '.deb'
+        // },
+        // {
+        //     name: 'macOS',
+        //     icon: FaApple,
+        //     url: downloadUrls.macos,
+        //     color: 'default',
+        //     chipColor: 'default',
+        //     description: 'Installer for macOS',
+        //     fileType: '.dmg'
+        // }
     ]
 
     useEffect(() => {
@@ -92,17 +92,16 @@ export default function NightlyDownload() {
                     <div className="mb-8">
                         {/* Title */}
                         <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-4 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-                            SimpMusic Nightly
+                            Echo
                         </h2>
-                        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mb-8">
-                            Preparing your download...
-                        </h4>
+                        {/* <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mb-8">
+                            Preparando seu download...
+                        </h4> */}
                     </div>
 
                     {/* Countdown Display */}
-                    <div className="mb-8">
+                    {/* <div className="mb-8">
                         <div className="relative w-40 h-40 mx-auto">
-                            {/* Circular Progress */}
                             <svg className="w-40 h-40 transform -rotate-90" viewBox="0 0 36 36">
                                 <path
                                     className="text-gray-300 dark:text-gray-600"
@@ -115,44 +114,47 @@ export default function NightlyDownload() {
                                     className="text-gradientstart"
                                     stroke="currentColor"
                                     strokeWidth="2"
-                                    strokeDasharray={`${((10 - countdown) / 10) * 100}, 100`}
+                                    // strokeDasharray={`${((10 - countdown) / 10) * 100}, 100`}
                                     strokeLinecap="round"
                                     fill="none"
                                     d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"
                                 />
                             </svg>
 
-                            {/* Countdown Number */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <span className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gradientstart to-gradientend">
-                                    {countdown === 0 ? '🚀' : countdown}
+                                    🚀
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Status Text */}
                     <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-                        {countdown === 0
-                            ? 'Ready to download!'
-                            : `Please wait ${countdown} second${countdown !== 1 ? 's' : ''}...`
-                        }
+                        Pronto para baixar!
+                        {/* {countdown === 0
+                            ? 'Pronto para baixar!'
+                            : `Por favor, aguarde ${countdown} segundo${countdown !== 1 ? 's' : ''}...`
+                        } */}
                     </p>
 
                     {/* Download Button with Dropdown */}
                     <div className="mb-8">
-                        <Dropdown placement="bottom" isDisabled={!isButtonEnabled}>
+                        {/* <Dropdown placement="bottom" isDisabled={!isButtonEnabled}> */}
+                        <Dropdown placement="bottom">
                             <DropdownTrigger>
                                 <Button
                                     color="primary"
                                     size="lg"
                                     radius="lg"
-                                    isDisabled={!isButtonEnabled}
+                                    // isDisabled={!isButtonEnabled}
                                     startContent={<TbDownload className="text-xl" />}
                                     endContent={<TbChevronDown className="text-xl" />}
-                                    className={`${isButtonEnabled ? 'animate-pulse' : ''} font-semibold px-8`}
+                                    // className={`${isButtonEnabled ? 'animate-pulse' : ''} font-semibold px-8`}
+                                    className={`font-semibold px-8`}
                                 >
-                                    {isButtonEnabled ? 'Download Now' : 'Please Wait...'}
+                                    Baixar agora
+                                    {/* {isButtonEnabled ? 'Download Now' : 'Please Wait...'} */}
                                 </Button>
                             </DropdownTrigger>
                             <DropdownMenu 
@@ -183,7 +185,7 @@ export default function NightlyDownload() {
 
                     {/* Security Notice */}
                     <p className="text-sm text-gray-500/80">
-                        🔒 This is a secure download from SimpMusic
+                        🔒 Este é um download seguro do Echo
                     </p>
                 </div>
             </div>

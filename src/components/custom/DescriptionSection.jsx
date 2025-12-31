@@ -26,16 +26,16 @@ const DescriptionSection = () => {
           ></Image>
           <div>
             <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-              SimpMusic
+              Echo
             </h2>
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              Simple UI, feature-rich, ad-free, free download, and open-source.
+              Interface simples, repleto de recursos, sem anúncios, download gratuito e de código aberto.
             </h4>
             <br></br>
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
-              Use data from YouTube Music with upto 256kps audio quality or 1080p
-              video quality. Personalize your music experience with SimpMusic.
-              UI is inspired by Spotify and YouTube Music.
+              Use dados do YouTube Music com qualidade de áudio de até 256 kbps ou qualidade de vídeo de 1080p.
+              Personalize sua experiência musical com o Echo. 
+              A interface do usuário foi inspirada no Spotify e no YouTube Music.
             </h4>
           </div>
         </div>

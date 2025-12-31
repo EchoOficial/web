@@ -6,38 +6,38 @@ import { IoCloudOffline } from "react-icons/io5";
 import { Card, CardBody, CardHeader, CardTitle } from "@nextui-org/react";
 const features = [
   {
-    title: "Streaming Music",
+    title: "Streaming de Música",
     descriptions:
-      "Play music from YouTube Music or YouTube free without ads in the background",
+      "Reproduza músicas do YouTube Music ou do YouTube gratuitamente, sem anúncios, em segundo plano",
     image: MdLibraryMusic,
   },
   {
-    title: "Browsing",
+    title: "Navegação Rápida",
     descriptions:
-      "Browsing Home, Charts, Podcast, Moods & Genre with YouTube Music data at high speed",
+      "Navegação em Home, Charts, Podcast, Moods & Genre com dados do YouTube Music em alta velocidade",
     image: FaSearch,
   },
   {
-    title: "Personalized",
+    title: "Personalização de Dados",
     descriptions:
-      "Analyze your playing data, create custom playlists, and sync with YouTube Music",
+      "Analise seus dados de reprodução, crie playlists personalizadas e sincronize com o YouTube Music",
     image: TbAnalyze,
   },
   {
-    title: "Offline Playing",
-    descriptions: "Caching and can save data for offline playback",
+    title: "Reprodução Offline",
+    descriptions: "Armazenamento em cache e salvamento de dados para reprodução offline",
     image: IoCloudOffline,
   },
   {
-    title: "Synced lyrics",
+    title: "Letra Sincronizada",
     descriptions:
-      "Synced lyrics from Musixmatch and YouTube Transcript and translated lyrics from Musixmatch",
+      "Letras sincronizadas do Musixmatch e do YouTube Transcript e letras traduzidas do Musixmatch",
     image: MdLyrics,
   },
   {
-    title: "Many more",
+    title: "Muitas outras funcionalidades",
     descriptions:
-      "Many more features like SponsorBlock, Sleep Timer, Android Auto, Video Option, etc",
+      " Muitas outras funcionalidades como SponsorBlock, Sleep Timer, Android Auto, Video Option, etc",
     image: MdFeaturedPlayList,
   },
 ];
@@ -45,7 +45,7 @@ const FeatureSection = () => {
   return (
     <div className="py-4">
       <h1 className="text-center scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl bg-clip-text py-10 text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-        Feature
+        Funcionalidades
       </h1>
       <div className="grid grid-cols-1 mx-14 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-start">
         {features.map((feature, index) => (

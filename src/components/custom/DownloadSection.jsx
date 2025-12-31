@@ -4,7 +4,7 @@ import Announcement from "./Announcement";
 const store = [
   {
     name: "Github",
-    url: "https://github.com/maxrave-dev/SimpMusic/releases",
+    url: "https://github.com/maxrave-dev/Echo/releases",
     thumbnail:
       "https://raw.githubusercontent.com/NeoApplications/Neo-Backup/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png",
   },
@@ -46,13 +46,13 @@ const DownloadSection = () => {
           <div>
             <Announcement />
             <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-              Get SimpMusic now!
+              Obtenha o Eco agora!
             </h2>
             <h4 className="scroll-m-20 text-xl font-semibold tracking-tight blink">
-              SimpMusic is available on Android and Desktop (Windows, macOS, Linux). Download it now!
+              O Echo está disponível para Android e Windows. Baixe agora mesmo!
             </h4>
             <p className="py-4 text-sm text-gray-500/80">
-              Support Android 8.0 above and Android Auto, all Desktop platforms
+              Compatível com Android 8.0 ou superior e Android Auto, em todas as plataformas de desktop.
             </p>
           </div>
           <div className="grid grid-cols-1 justify-center">

@@ -2,24 +2,24 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "Privacy Policy - SimpMusic",
-  description: "Privacy Policy for SimpMusic - A simple music app using YouTube Music for backend",
+  title: "Privacy Policy - Echo",
+  description: "Privacy Policy for Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
   openGraph: {
-    title: "Privacy Policy - SimpMusic",
-    description: "Privacy Policy for SimpMusic - A simple music app using YouTube Music for backend",
+    title: "Privacy Policy - Echo",
+    description: "Privacy Policy for Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
     images: [
       {
         url: "/images/blog/feature.jpg",
         width: 1200,
         height: 630,
-        alt: "SimpMusic - Feel free when playing music",
+        alt: "Echo - Feel free when playing music",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy - SimpMusic",
-    description: "Privacy Policy for SimpMusic - A simple music app using YouTube Music for backend",
+    title: "Privacy Policy - Echo",
+    description: "Privacy Policy for Echo - Um aplicativo de música simples que utiliza o YouTube Music como backend",
     images: ["/images/blog/feature.jpg"],
   },
 };
@@ -29,14 +29,14 @@ export default function PrivacyPolicy() {
     <div className="container mx-auto px-4 py-8 lg:px-16 md:px-16 sm:px-10">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-          Privacy Policy for SimpMusic.org
+          Privacy Policy for Echo.org
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-8">Effective Date: 12/6/2025</p>
 
         <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-xl prose-headings:font-semibold prose-headings:my-4 prose-p:my-3 prose-a:text-blue-500 prose-a:no-underline hover:prose-a:underline">
-          <p>Welcome to SimpMusic.org!</p>
+          <p>Welcome to Echo.org!</p>
 
-          <p>At SimpMusic.org (hereinafter referred to as &quot;us,&quot; &quot;we,&quot; or &quot;our&quot;), we respect the privacy of our visitors and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
+          <p>At Echo.org (hereinafter referred to as &quot;us,&quot; &quot;we,&quot; or &quot;our&quot;), we respect the privacy of our visitors and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
 
           <p>Please read this policy carefully. By accessing or using our website, you agree to the terms outlined in this Privacy Policy.</p>
 
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
           <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
 
           <h2>3. Google AdSense & the DoubleClick DART Cookie</h2>
-          <p>We use Google AdSense to display advertisements on SimpMusic.org.</p>
+          <p>We use Google AdSense to display advertisements on Echo.org.</p>
           <ul>
             <li>Google, as a third-party vendor, uses cookies to serve ads on our site.</li>
             <li>Google&apos;s use of the DART cookie enables it to serve ads to our users based on their visit to our site and other sites on the Internet.</li>
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2>5. Your GDPR Rights</h2>
-          <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. SimpMusic.org aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.</p>
+          <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. Echo.org aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.</p>
 
           <p>Your rights include:</p>
           <ul>

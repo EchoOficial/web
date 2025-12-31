@@ -19,7 +19,7 @@ import { useEffect, useState } from "react";
 
 async function fetcher() {
   const res = await fetch(
-    "https://api.github.com/repos/maxrave-dev/SimpMusic?page=1&per_page=1"
+    "https://api.github.com/repos/maxrave-dev/Echo?page=1&per_page=1"
   );
   if (!res.ok) {
     throw new Error(res.statusText);
@@ -37,10 +37,10 @@ export default function Navbar() {
   }, [starCount]);
   const menus = [
     { title: "Home", path: "/" },
-    { title: "Download", path: "/download" },
-    { title: "Donate", path: "/donate" },
-    { title: "About Us", path: "/about" },
-    { title: "Blogs", path: "/blogs" },
+    { title: "Download", path: "/nightly-download" },
+    { title: "Doação", path: "/donate" },
+    { title: "Sobre", path: "/about" },
+    // { title: "Blogs", path: "/blogs" },
   ];
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState(false);
@@ -82,7 +82,7 @@ export default function Navbar() {
           <Logo />
           <Link href="/">
             <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-              SimpMusic
+              Echo
             </h1>
           </Link>
         </NavbarBrand>
@@ -105,10 +105,11 @@ export default function Navbar() {
             variant="light"
             as={Link}
             size="md"
-            href="https://github.com/maxrave-dev/SimpMusic"
+            href="https://github.com/EchoOficial"
             target="_blank"
           >
-            <Github /> {formatter.format(starCount)}
+            <Github /> Github
+            {/* <Github /> {formatter.format(starCount)} */}
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -156,7 +157,7 @@ export default function Navbar() {
   //             </div>
   //             <Link href="/">
   //               <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-  //                 SimpMusic
+  //                 Echo
   //               </h1>
   //             </Link>
   //           </div>

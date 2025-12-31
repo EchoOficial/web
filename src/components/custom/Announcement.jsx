@@ -11,7 +11,7 @@ const Announcement = () => {
       >
         <TbSparkles className="text-lg" />
         <AnimatedShinyText className="inline-flex items-center justify-center max-w-none">
-          <span className="font-medium">Desktop app is now available (alpha)</span>
+          <span className="font-medium">Aplicativo para desktop já está disponível (versão alfa).</span>
           <span className="ml-1 transition-transform group-hover:translate-x-0.5">→</span>
         </AnimatedShinyText>
       </Link>

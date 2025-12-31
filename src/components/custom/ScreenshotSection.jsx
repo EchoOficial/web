@@ -8,7 +8,7 @@ const ScreenshotSection = () => {
     <section className="screenshot-section ">
       <div className="relative isolate pt-14">
         <h1 className="text-center scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl bg-clip-text py-10 text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-          Screenshot
+          Capturas
         </h1>
         <div className="w-full flex items-center justify-center relative group">
           <Image
@@ -20,7 +20,7 @@ const ScreenshotSection = () => {
             sizes="(max-width: 1600px) 100vw, 75vw"
             style={{ objectFit: "contain" }}
           />
-          <Button
+          {/* <Button
             className="absolute hidden group-hover:block transition-all duration-500 ease-in-out"
             color="secondary"
           >
@@ -31,7 +31,7 @@ const ScreenshotSection = () => {
             >
               Show more
             </Link>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

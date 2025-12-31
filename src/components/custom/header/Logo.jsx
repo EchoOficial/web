@@ -11,7 +11,7 @@ const Logo = () => {
         height={36}
         width={36}
         loading="lazy"
-        alt="SimpMusic"
+        alt="Echo"
       />
     </Link>
   );
