@@ -41,7 +41,7 @@ jobs:
             npm run build
             chown -R  www-data:www-data .
             sudo chmod -R 755 .
-        command_timeout: 30m
+        command_timeout: 30m 
     
     - name: "Substituir build por novo conteúdo"
       uses: appleboy/ssh-action@v1.2.0
