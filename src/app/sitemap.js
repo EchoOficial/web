@@ -1,7 +1,6 @@
 import fs from "fs";
 import { MetadataRoute } from "next";
 import path from "path";
-import { databases, COLLECTION_ID, DATABASE_ID, Query } from "@/lib/appwrite";
 
 const baseUrl = "https://simpmusic.org";
 const baseDir = "src/app";
@@ -20,21 +19,11 @@ async function getRoutes() {
     }
   });
 
-  // to create dynamic routes.
-  async function getBlogs() {
-    const response = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, [
-      Query.orderDesc("createdAt"),
-    ]);
-    const blogsViRoute = response.documents.map(
-      (blog) => `/blogs/vi/${blog.slug}`
-    );
-    const blogsEnRoute = response.documents.map(
-      (blog) => `/blogs/en/${blog.slug}`
-    );
-    routes = [...routes, ...blogsViRoute, ...blogsEnRoute];
-  }
+  // Simulando rotas de blogs
+  const blogsViRoute = []; // se quiser, pode colocar manualmente
+  const blogsEnRoute = [];
 
-  await getBlogs();
+  routes = [...routes, ...blogsViRoute, ...blogsEnRoute];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
