@@ -9,7 +9,7 @@ import rehypeRaw from 'rehype-raw';
 // import { databases, COLLECTION_ID, DATABASE_ID, Query } from '@/lib/appwrite';
 import LanguageToggle from '@/components/custom/LanguageToggle';
 import AuthorInfo from '@/components/custom/AuthorInfo';
-
+ 
 const DEFAULT_IMAGE = '/images/blog/placeholder.png'; // Placeholder image
 
 // export async function generateMetadata({ params }) {
