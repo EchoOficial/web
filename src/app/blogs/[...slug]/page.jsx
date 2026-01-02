@@ -11,7 +11,7 @@ import LanguageToggle from '@/components/custom/LanguageToggle';
 import AuthorInfo from '@/components/custom/AuthorInfo';
 
 const DEFAULT_IMAGE = '/images/blog/placeholder.png'; // Placeholder image
-
+ 
 // export async function generateMetadata({ params }) {
 //   const blog = await getBlogPost(params.slug[1]);
   
