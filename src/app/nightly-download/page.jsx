@@ -11,7 +11,8 @@ export default function NightlyDownload() {
     
     // Download URLs for different platforms
     const downloadUrls = {
-        android: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_ANDROID_URL || '#',
+        // android: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_ANDROID_URL || '#',
+        android: "https://play.google.com/store/apps/details?id=com.joaoalves.echo",
         windows: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_WINDOWS_URL || '#',
         linux: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_LINUX_URL || '#',
         macos: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_MACOS_URL || '#'
