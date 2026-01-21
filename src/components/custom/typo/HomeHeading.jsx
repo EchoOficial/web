@@ -4,6 +4,7 @@ import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@
 import { TbDownload, TbChevronDown } from "react-icons/tb";
 import React, { useEffect, useState } from "react";
 import Announcement from "../Announcement";
+import { platforms } from "@/utils/platforms";
 
 async function fetcher() {
   const res = await fetch(

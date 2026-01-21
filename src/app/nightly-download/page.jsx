@@ -3,61 +3,13 @@
 import { useState, useEffect } from 'react'
 import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react"
 import { TbDownload, TbChevronDown } from "react-icons/tb"
-import { FaAndroid, FaWindows, FaLinux, FaApple } from "react-icons/fa"
+import { platforms } from '@/utils/platforms'
 
 export default function NightlyDownload() {
     const [countdown, setCountdown] = useState(10)
     const [isButtonEnabled, setIsButtonEnabled] = useState(false)
     
-    // Download URLs for different platforms
-    const downloadUrls = {
-        // android: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_ANDROID_URL || '#',
-        android: "https://play.google.com/store/apps/details?id=com.joaoalves.echo",
-        windows: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_WINDOWS_URL || '#',
-        linux: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_LINUX_URL || '#',
-        macos: process.env.NEXT_PUBLIC_NIGHTLY_DOWNLOAD_MACOS_URL || '#'
-    }
     
-    // Platform configurations
-    const platforms = [
-        {
-            name: 'Android',
-            icon: FaAndroid,
-            url: downloadUrls.android,
-            color: 'success',
-            chipColor: 'success',
-            description: 'APK para Android',
-            fileType: '.apk'
-        },
-        {
-            name: 'Windows',
-            icon: FaWindows,
-            url: downloadUrls.windows,
-            color: 'primary',
-            chipColor: 'primary',
-            description: 'Instalador para Windows',
-            fileType: '.msi'
-        },
-        // {
-        //     name: 'Linux',
-        //     icon: FaLinux,
-        //     url: downloadUrls.linux,
-        //     color: 'warning',
-        //     chipColor: 'warning',
-        //     description: 'Package for Linux',
-        //     fileType: '.deb'
-        // },
-        // {
-        //     name: 'macOS',
-        //     icon: FaApple,
-        //     url: downloadUrls.macos,
-        //     color: 'default',
-        //     chipColor: 'default',
-        //     description: 'Installer for macOS',
-        //     fileType: '.dmg'
-        // }
-    ]
-
     useEffect(() => {
         const timer = setInterval(() => {
             setCountdown((prev) => {
@@ -95,48 +47,12 @@ export default function NightlyDownload() {
                         <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-4 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
                             Echo
                         </h2>
-                        {/* <h4 className="scroll-m-20 text-xl font-semibold tracking-tight mb-8">
-                            Preparando seu download...
-                        </h4> */}
                     </div>
 
-                    {/* Countdown Display */}
-                    {/* <div className="mb-8">
-                        <div className="relative w-40 h-40 mx-auto">
-                            <svg className="w-40 h-40 transform -rotate-90" viewBox="0 0 36 36">
-                                <path
-                                    className="text-gray-300 dark:text-gray-600"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    fill="none"
-                                    d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"
-                                />
-                                <path
-                                    className="text-gradientstart"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    // strokeDasharray={`${((10 - countdown) / 10) * 100}, 100`}
-                                    strokeLinecap="round"
-                                    fill="none"
-                                    d="M18 2.0845a 15.9155 15.9155 0 0 1 0 31.831a 15.9155 15.9155 0 0 1 0 -31.831"
-                                />
-                            </svg>
-
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gradientstart to-gradientend">
-                                    🚀
-                                </span>
-                            </div>
-                        </div>
-                    </div> */}
 
                     {/* Status Text */}
                     <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
                         Pronto para baixar!
-                        {/* {countdown === 0
-                            ? 'Pronto para baixar!'
-                            : `Por favor, aguarde ${countdown} segundo${countdown !== 1 ? 's' : ''}...`
-                        } */}
                     </p>
 
                     {/* Download Button with Dropdown */}
