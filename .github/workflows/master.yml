@@ -25,18 +25,16 @@ jobs:
           script: |
             set -e
 
-            APP_DIR=${{ secrets.TARGET_PRODUCTION }}/front
+            BASE_DIR=${{ secrets.TARGET_PRODUCTION }}/front
+            RELEASE_DIR=$BASE_DIR/releases/$(date +%Y-%m-%d_%H-%M-%S)
+            CURRENT_DIR=$BASE_DIR/current
 
-            echo "➡️ Atualizando código"
-            mkdir -p $APP_DIR
-            cd $APP_DIR
+            echo "➡️ Criando release"
+            mkdir -p $RELEASE_DIR
+            cd $RELEASE_DIR
 
-            if [ ! -d ".git" ]; then
-              git clone git@github.com:EchoOficial/web.git .
-            else
-              git fetch origin
-              git reset --hard origin/master
-            fi
+            echo "➡️ Clonando código"
+            git clone git@github.com:EchoOficial/web.git .
 
             echo "➡️ Instalando dependências"
             npm install --legacy-peer-deps
@@ -44,10 +42,13 @@ jobs:
             echo "➡️ Buildando Next.js"
             npm run build
 
+            echo "➡️ Trocando release (atomic)"
+            ln -sfn $RELEASE_DIR $CURRENT_DIR
+
             echo "➡️ Reiniciando PM2"
-            pm2 restart echo-front || pm2 start npm --name "echo-front" -- start
+            pm2 reload echo-front || pm2 start npm --name "echo-front" -- start --cwd $CURRENT_DIR
             pm2 save
 
             echo "➡️ Ajustando permissões"
-            chown -R www-data:www-data $APP_DIR
-            chmod -R 755 $APP_DIR
+            chown -R www-data:www-data $BASE_DIR
+            chmod -R 755 $BASE_DIR
