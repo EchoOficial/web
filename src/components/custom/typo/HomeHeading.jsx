@@ -1,9 +1,7 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
-import Link from "next/link";
+import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/react"
 import React, { useEffect, useState } from "react";
-import { MdDownload } from "react-icons/md";
 import Announcement from "../Announcement";
 
 async function fetcher() {
@@ -38,7 +36,7 @@ const HomeHeading = () => {
           <img src="https://trendshift.io/api/badge/repositories/13482" alt="maxrave-dev%2FSimpMusic | Trendshift" style={{ width: "250px", height: "55px" }} width="250" height="55" />
         </a> */}
         <div className="flex items-center">
-          <Button
+          {/* <Button
             color="primary"
             size="lg"
             radius="lg"
@@ -47,7 +45,47 @@ const HomeHeading = () => {
             <Link href="/nightly-download">
               <p className="font-semibold">Download</p>
             </Link>
-          </Button>
+          </Button> */}
+          <Dropdown placement="bottom">
+            <DropdownTrigger>
+                <Button
+                    color="primary"
+                    size="lg"
+                    radius="lg"
+                    // isDisabled={!isButtonEnabled}
+                    startContent={<TbDownload className="text-xl" />}
+                    endContent={<TbChevronDown className="text-xl" />}
+                    // className={`${isButtonEnabled ? 'animate-pulse' : ''} font-semibold px-8`}
+                    className={`font-semibold px-8`}
+                >
+                    Baixar agora
+                    {/* {isButtonEnabled ? 'Download Now' : 'Please Wait...'} */}
+                </Button>
+            </DropdownTrigger>
+            <DropdownMenu 
+                aria-label="Download platforms"
+                variant="flat"
+                onAction={(key) => {
+                    const platform = platforms.find(p => p.name.toLowerCase() === key)
+                    if (platform && platform.url) {
+                        window.open(platform.url, '_blank', 'noopener,noreferrer')
+                    }
+                }}
+            >
+                {platforms.map((platform) => {
+                    const Icon = platform.icon
+                    return (
+                        <DropdownItem
+                            key={platform.name.toLowerCase()}
+                            startContent={<Icon className="text-xl" />}
+                            description={platform.description}
+                        >
+                            {platform.name}
+                        </DropdownItem>
+                    )
+                })}
+            </DropdownMenu>
+        </Dropdown>
           <p className="px-4 text-sm text-gray-500/80">
             Última versão: {version}
           </p>
