@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -8,7 +7,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_APPWRITE_IMAGE_ENDPOINT,
+        hostname: process.env.NEXT_PUBLIC_APPWRITE_IMAGE_ENDPOINT || "localhost", // fallback
       },
     ],
   },
