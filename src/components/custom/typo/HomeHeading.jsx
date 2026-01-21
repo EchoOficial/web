@@ -28,7 +28,7 @@ const HomeHeading = () => {
     <div>
       <Announcement />
       <h2 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl pb-8 bg-clip-text text-transparent bg-gradient-to-r from-gradientstart/60 to-50% to-gradientend/60">
-        Um aplicativo de música simples que utiliza o YouTube Music como backend
+        Um aplicativo de música sem anúncio, com reprodução offline e tudo grátis
       </h2>
       <h4 className="scroll-m-20 text-xl font-semibold tracking-tight blink">
         Ouça suas músicas, vídeos, podcasts, rádios e muito mais favoritos do YouTube Music com o Echo gratuitamente.
