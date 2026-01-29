@@ -1,53 +1,104 @@
-name: prod
+# name: prod
+
+# on:
+#   push:
+#     branches: [master]
+
+#   workflow_dispatch:
+
+# jobs:
+#   deploy-production:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout do repositório
+#         uses: actions/checkout@v4
+
+#       - name: Deploy para VPS
+#         uses: appleboy/ssh-action@v1.2.0
+#         with:
+#           host: ${{ secrets.REMOTE_HOST }}
+#           username: ${{ secrets.REMOTE_USER }}
+#           key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           port: ${{ secrets.REMOTE_PORT }}
+#           command_timeout: 40m
+#           script: |
+#             set -e
+
+#             APP_DIR=${{ secrets.TARGET_PRODUCTION }}/front
+
+#             echo "➡️ Atualizando código"
+#             mkdir -p $APP_DIR
+#             cd $APP_DIR
+
+#             if [ ! -d ".git" ]; then
+#               git clone git@github.com:EchoOficial/web.git .
+#             else
+#               git fetch origin
+#               git reset --hard origin/master
+#             fi
+
+#             echo "➡️ Instalando dependências"
+#             npm install --legacy-peer-deps
+
+#             echo "➡️ Buildando Next.js"
+#             npm run build
+
+#             echo "➡️ Reiniciando PM2"
+#             pm2 restart echo-front || pm2 start npm --name "echo-front" -- start
+#             pm2 save
+
+#             echo "➡️ Ajustando permissões"
+#             chown -R www-data:www-data $APP_DIR
+#             chmod -R 755 $APP_DIR
+
+name: Build & Deploy Echo
 
 on:
   push:
     branches: [master]
 
-  workflow_dispatch:
-
 jobs:
-  deploy-production:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v4
+    - name: Checkout código
+      uses: actions/checkout@v3
 
-      - name: Deploy para VPS
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.REMOTE_PORT }}
-          command_timeout: 40m
-          script: |
-            set -e
+    - name: Deploy via rsync
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.EC2_PROD_PRIVATE_KEY }}
+        ARGS: "-avz --delete --exclude-from=.rsync-exclude"
+        SOURCE: "./"
+        REMOTE_HOST: ${{ secrets.EC2_PROD_HOST }}
+        REMOTE_USER: ubuntu
+        REMOTE_PORT: 22
+        TARGET: "/var/www/echo"
 
-            APP_DIR=${{ secrets.TARGET_PRODUCTION }}/front
+    - name: Pós-deploy (EC2)
+      uses: appleboy/ssh-action@v0.1.5
+      with:
+        host: ${{ secrets.EC2_PROD_HOST }}
+        username: ubuntu
+        key: ${{ secrets.EC2_PROD_PRIVATE_KEY }}
+        command_timeout: 40m
+        script: |
+          set -e
+          APP_DIR=/var/www/echo
+          cd $APP_DIR
 
-            echo "➡️ Atualizando código"
-            mkdir -p $APP_DIR
-            cd $APP_DIR
+          echo "➡️ Instalando dependências"
+          npm install --legacy-peer-deps
 
-            if [ ! -d ".git" ]; then
-              git clone git@github.com:EchoOficial/web.git .
-            else
-              git fetch origin
-              git reset --hard origin/master
-            fi
+          echo "➡️ Buildando Next.js"
+          npm run build
 
-            echo "➡️ Instalando dependências"
-            npm install --legacy-peer-deps
+          echo "➡️ Reiniciando PM2"
+          pm2 restart echo-front || pm2 start npm --name "echo-front" -- start
+          pm2 save
 
-            echo "➡️ Buildando Next.js"
-            npm run build
-
-            echo "➡️ Reiniciando PM2"
-            pm2 restart echo-front || pm2 start npm --name "echo-front" -- start
-            pm2 save
-
-            echo "➡️ Ajustando permissões"
-            chown -R www-data:www-data $APP_DIR
-            chmod -R 755 $APP_DIR
+          echo "➡️ Ajustando permissões"
+          chown -R www-data:www-data $APP_DIR
+          chmod -R 755 $APP_DIR
