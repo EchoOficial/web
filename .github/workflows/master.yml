@@ -100,5 +100,5 @@ jobs:
           pm2 save
 
           echo "➡️ Ajustando permissões"
-          chown -R www-data:www-data $APP_DIR
-          chmod -R 755 $APP_DIR
+          sudo chown -R www-data:www-data $APP_DIR
+          sudo chmod -R 755 $APP_DIR
