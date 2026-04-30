@@ -2,7 +2,7 @@ import fs from "fs";
 import { MetadataRoute } from "next";
 import path from "path";
 
-const baseUrl = "https://simpmusic.org";
+const baseUrl = "https://echo.pacoca.net";
 const baseDir = "src/app";
 const excludeDirs = ["api", "fonts"];
 

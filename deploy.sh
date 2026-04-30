@@ -2,8 +2,7 @@
 
 echo "🔧 Iniciando build..."
 
-next build
-next export
+npm run build
 
 if [ $? -ne 0 ]; then
   echo "❌ Erro no build. Abortando deploy."
