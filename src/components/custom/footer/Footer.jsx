@@ -10,15 +10,15 @@ const communities = [
     description: "Junte-se ao nosso servidor do Discord para se comunicar com a comunidade.",
     thumbnail:
       "https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg",
-    url: "https://discord.gg/xGzYPG3Z",
+    url: "https://discord.gg/wx3PFq52Gv",
   },
-  // {
-  //   title: "GitHub",
-  //   description: "Contribute to the project on GitHub or create an issue.",
-  //   thumbnail:
-  //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-  //   url: "https://github.com/maxrave-dev/Echo",
-  // },
+  {
+    title: "GitHub",
+    description: "Ajude nosso projeto no GitHub.",
+    thumbnail:
+      "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    url: "https://github.com/PacocaOficial",
+  },
   // {
   //   title: "Crowdin",
   //   description: "Help us translate the app into your language.",
